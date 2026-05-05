@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Class Notes - World History</title> <!-- Stealth Tab Name -->
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #fff; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
+    <title>Math Assignment</title>
 </head>
-<body>
-    <!-- This embeds the chat directly. Many school filters block the chat URL but NOT the embed URL -->
-    <iframe src="https://organizations.minnit.chat/498177879084110/School" allow="geolocation; microphone; camera; display-capture; autoplay"></iframe>
+<body style="margin:0; overflow:hidden;">
+    <!-- This uses a 'cors-anywhere' style trick to fetch the content -->
+    <iframe id="proxy" style="width:100vw; height:100vh; border:none;"></iframe>
+
+    <script>
+        const target = "https://minnit.chat";
+        // We use a bridge to get around the 'Refused to Connect' error
+        document.getElementById('proxy').src = "https://allorigins.win" + encodeURIComponent(target);
+    </script>
+    <iframe src="https://minnit.chat" 
+        style="border:none;width:100%;height:100vh;" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+</iframe>
+
 </body>
 </html>
