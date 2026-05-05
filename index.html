@@ -3,8 +3,20 @@
 <head>
     <title>Math Assignment</title>
 </head>
-<body style="margin:0; overflow:hidden;">
-    <!-- This uses a more powerful public proxy engine -->
-    <iframe id="proxy" src="https://incognito.best" style="width:100vw; height:100vh; border:none;"></iframe>
+<body style="margin:0; padding:0; overflow:hidden; background: #fff;">
+    <iframe id="frame" style="width:100vw; height:100vh; border:none;"></iframe>
+
+    <script>
+        (function() {
+            // Your target chat link
+            const target = "https://minnit.chat";
+            
+            // This is a more powerful public 'CORS' gateway that allows JS to run
+            const proxyGate = "https://freeboard.io";
+            
+            const frame = document.getElementById('frame');
+            frame.src = proxyGate + target;
+        })();
+    </script>
 </body>
 </html>
